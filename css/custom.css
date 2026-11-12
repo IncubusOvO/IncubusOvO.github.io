@@ -313,7 +313,7 @@ html[data-theme="dark"] div#runtime {
 
 /* ---------- 13. 看板娘布局适配：左下角留位，避免遮挡文章文字 ---------- */
 /* 桌面端（768px~1700px）给内容区预留看板娘宽度；超宽屏本身左侧留白足够，无需处理 */
-@media screen and (min-width: 768px) and (max-width: 1700px) {
+@media screen and (min-width: 768px) and (max-width: 1800px) {
   #content-inner.layout {
     padding-left: 300px;
   }
