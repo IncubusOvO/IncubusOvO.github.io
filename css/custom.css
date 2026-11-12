@@ -320,12 +320,23 @@ html[data-theme="dark"] div#runtime {
 }
 
 /* ---------- 14. 看板娘与文章相切（参考 blog.haiyong.site） ---------- */
-/* 看板娘固定占屏幕左侧 0~300px（#live2d 画布 300x300）。
-   把居中的内容列宽度改为 视口宽 - 2x300px，居中后内容列左缘正好落在
-   看板娘右缘处（+15px 内边距，留 ~25px 呼吸空隙），视觉上基本相切；
+/* 看板娘画布缩小为 260px（见第 15 节），占屏幕左侧 0~260px。
+   内容列宽度 = 视口宽 - 2×270，居中后左缘 270px，加 15px 内边距
+   卡片左缘 285px；对话框宽 265px（左边距 20）右缘正好 285px 与卡片完全相切；
    上限 1920px 防止超宽屏上行文字过长。 */
-@media screen and (min-width: 1820px) {
+@media screen and (min-width: 1760px) {
   #content-inner.layout:not(.hide-aside) {
-    max-width: min(1920px, calc(100% - 620px));
+    max-width: min(1920px, calc(100% - 540px));
   }
+}
+
+/* ---------- 15. 看板娘本体缩小 + 对话框与文章完全相切 ---------- */
+/* waifu.css 由 JS 注入到 head 末尾，同优先级会覆盖本文件，故需 !important */
+#live2d {
+  width: 260px !important;
+  height: 260px !important;
+}
+
+#waifu-tips {
+  width: 265px !important;
 }
