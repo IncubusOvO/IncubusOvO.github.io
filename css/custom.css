@@ -311,7 +311,7 @@ html[data-theme="dark"] div#runtime {
   color: #c0c0c0;
 }
 
-/* ---------- 13. 看板娘布局适配：手机端隐藏看板娘，避免遮挡正文 ---------- */
+/* 13. waifu: hidden on mobile to avoid covering text */
 @media screen and (max-width: 767px) {
   #waifu,
   #waifu-toggle {
