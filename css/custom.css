@@ -319,11 +319,9 @@ html[data-theme="dark"] div#runtime {
   }
 }
 
-/* ---------- 14. 看板娘与文章相切（参考 blog.haiyong.site） ---------- */
-/* 看板娘画布缩小为 220px（见第 15 节），占屏幕左侧 0~220px。
-   内容列宽度 = 视口宽 - 2×270，居中后左缘 270px，加 15px 内边距
-   卡片左缘 285px；对话框宽 265px（左边距 20）右缘正好 285px 与卡片完全相切；
-   上限 1920px 防止超宽屏上行文字过长。 */
+/* ---------- 14. 宽屏内容列限宽 ---------- */
+/* 超宽屏下收窄内容列，避免正文行过长；气泡与卡片的相切由
+   /js/waifu-align.js 运行时按卡片真实左缘动态对齐，不在此写死像素。 */
 @media screen and (min-width: 1760px) {
   #content-inner.layout:not(.hide-aside) {
     max-width: min(1920px, calc(100% - 540px));
