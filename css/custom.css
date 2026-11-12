@@ -320,7 +320,7 @@ html[data-theme="dark"] div#runtime {
 }
 
 /* ---------- 14. 看板娘与文章相切（参考 blog.haiyong.site） ---------- */
-/* 看板娘画布缩小为 260px（见第 15 节），占屏幕左侧 0~260px。
+/* 看板娘画布缩小为 220px（见第 15 节），占屏幕左侧 0~220px。
    内容列宽度 = 视口宽 - 2×270，居中后左缘 270px，加 15px 内边距
    卡片左缘 285px；对话框宽 265px（左边距 20）右缘正好 285px 与卡片完全相切；
    上限 1920px 防止超宽屏上行文字过长。 */
@@ -333,12 +333,32 @@ html[data-theme="dark"] div#runtime {
 /* ---------- 15. 看板娘本体缩小 + 对话框与文章完全相切 ---------- */
 /* waifu.css 由 JS 注入到 head 末尾，同优先级会覆盖本文件，故需 !important */
 #live2d {
-  width: 260px !important;
-  height: 260px !important;
+  width: 220px !important;
+  height: 220px !important;
 }
 
 #waifu-tips {
   width: 265px !important;
+}
+
+/* 去掉看板娘默认的 25px 基线下移，避免脚底被屏幕底边裁掉 */
+#waifu {
+  transform: translateY(0) !important;
+}
+
+#waifu:hover {
+  transform: translateY(10px) !important;
+}
+
+/* 工具栏整体上移、图标压紧：7 个图标高约 164px，全部落在 220px 画布内，
+   最后一个 ×（quit）不会被顶到屏幕底边外看不到 */
+#waifu-tool {
+  top: 30px !important;
+  gap: 4px !important;
+}
+
+#waifu-tool svg {
+  height: 20px !important;
 }
 
 /* ---------- 16. 关闭看板娘后的恢复把手更明显 ---------- */
