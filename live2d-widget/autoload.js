@@ -55,7 +55,7 @@ function loadExternalResource(url, type) {
   // For detailed usage of configuration options, see README.en.md
   // 配置选项的具体用法见 README.md
   initWidget({
-    waifuPath: live2d_path + 'waifu-tips-v2.json',
+    waifuPath: live2d_path + 'waifu-tips.json',
     modelId: 4, // 默认模型：Rem（蕾姆）
     // cdnPath: 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/',
     cubism2Path: live2d_path + 'live2d.min.js',

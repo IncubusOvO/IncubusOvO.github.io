@@ -318,3 +318,14 @@ html[data-theme="dark"] div#runtime {
     display: none !important;
   }
 }
+
+/* ---------- 14. 看板娘与文章相切（参考 blog.haiyong.site） ---------- */
+/* 看板娘固定占屏幕左侧 0~300px（#live2d 画布 300x300）。
+   把居中的内容列宽度改为 视口宽 - 2x300px，居中后内容列左缘正好落在
+   看板娘右缘处（+15px 内边距，留 ~25px 呼吸空隙），视觉上基本相切；
+   上限 1920px 防止超宽屏上行文字过长。 */
+@media screen and (min-width: 1820px) {
+  #content-inner.layout:not(.hide-aside) {
+    max-width: min(1920px, calc(100% - 620px));
+  }
+}
