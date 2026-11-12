@@ -340,3 +340,18 @@ html[data-theme="dark"] div#runtime {
 #waifu-tips {
   width: 265px !important;
 }
+
+/* ---------- 16. 关闭看板娘后的恢复把手更明显 ---------- */
+/* 官方默认只露出 ~10px，太隐蔽；改为露出 25px，悬停滑出 40px。
+   仅作用于"已关闭"状态（waifu-toggle-active），看板娘显示时把手仍完全藏起 */
+#waifu-toggle {
+  z-index: 1001;
+}
+
+#waifu-toggle.waifu-toggle-active {
+  margin-left: -35px !important;
+}
+
+#waifu-toggle.waifu-toggle-active:hover {
+  margin-left: -20px !important;
+}
